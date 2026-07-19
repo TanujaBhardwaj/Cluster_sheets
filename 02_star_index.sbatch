@@ -11,12 +11,11 @@
 
 # =====================================================================
 # RUN THIS ONLY IF no shared human STAR index exists.
-# ASK FIRST: TP Sequencing / helpdesk@mdc-berlin.de  -- a reusable
 # GRCh38 index is ~30 GB; don't duplicate it if one is already on /fast.
 # =====================================================================
 
 # ============ CONFIG ============
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 REF=${PROJECT}/reference
 GENOME_FA=${REF}/GRCh38.primary_assembly.genome.fa        # unzipped genome FASTA
 GTF=${REF}/gencode.v46.primary_assembly.annotation.gtf    # unzipped GTF
