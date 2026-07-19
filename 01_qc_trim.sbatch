@@ -8,10 +8,10 @@
 #SBATCH --output=logs/qc_trim_%A_%a.out
 #SBATCH --error=logs/qc_trim_%A_%a.err
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=Tanuja.Bhardwaj@mdc-berlin.de
+#SBATCH --mail-user=Enter email address here
 
 # ============ CONFIG ============
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 RAWDIR=${PROJECT}/rawdata
 TRIMDIR=${PROJECT}/trimmed
 QCRAW=${PROJECT}/qc/fastqc_raw
