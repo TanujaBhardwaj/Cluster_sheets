@@ -1,16 +1,10 @@
 #!/bin/bash
-# =====================================================================
-# 05_archive.sh  --  RUN ON max-login AFTER the run is verified.
-# Follows the Max Cluster "good data-usage workflow" (slides 45-46):
-#   keep small results, relocate to /data for long-term storage with a
-#   bandwidth-limited rsync, then free the big intermediates off /fast.
-#
-# Edit DEST to your group's /data area before running.
+# ====================================================
 # =====================================================================
 set -euo pipefail
 
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
-DEST=/data/izsvak/Tanuja/piggy
+PROJECT=file location
+DEST=home directory file location
 
 echo "### 1. Sanity check: results exist before we touch anything"
 test -s "$PROJECT/counts/counts_matrix.tsv" || { echo "No counts matrix -- aborting."; exit 1; }
