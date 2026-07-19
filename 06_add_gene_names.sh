@@ -1,16 +1,12 @@
 #!/bin/bash
 # =====================================================================
-# 06_add_gene_names.sh  --  RUN ON max-login (tiny text job, no sbatch).
-# Adds gene symbols to the featureCounts matrix using the GTF that
-# built the STAR index. Produces two extra files, leaves the original
-# counts_matrix.tsv untouched.
 #
 #   counts_with_symbols.tsv : gene_id  gene_name  <15 sample columns>
 #   counts_symbols_only.tsv : gene_name <15 sample columns>  (collapsed)
 # =====================================================================
 set -euo pipefail
 
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 GTF=${PROJECT}/reference/gencode.v46.primary_assembly.annotation.gtf
 COUNTS=${PROJECT}/counts/counts_matrix.tsv
 OUTDIR=${PROJECT}/counts
