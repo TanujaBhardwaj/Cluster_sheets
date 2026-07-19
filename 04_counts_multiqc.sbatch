@@ -10,7 +10,7 @@
 #SBATCH --mail-user=YOUR.NAME@mdc-berlin.de
 
 # ============ CONFIG ============
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 BAMDIR=${PROJECT}/aligned
 GTF=${PROJECT}/reference/gencode.v46.primary_assembly.annotation.gtf  # same GTF as the index
 COUNTDIR=${PROJECT}/counts
