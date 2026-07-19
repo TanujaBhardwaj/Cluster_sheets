@@ -11,7 +11,7 @@
 #SBATCH --mail-user=YOUR.NAME@mdc-berlin.de
 
 # ============ CONFIG ============
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 TRIMDIR=${PROJECT}/trimmed
 INDEX=${PROJECT}/reference/star_index     # <-- or the SHARED index path, if one exists
 BAMDIR=${PROJECT}/aligned
