@@ -7,28 +7,12 @@
 #SBATCH --output=logs/salmon_index_%j.out
 #SBATCH --error=logs/salmon_index_%j.err
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=Tanuja.Bhardwaj@mdc-berlin.de
+#SBATCH --mail-user=----@mdc-berlin.de
 
-# =====================================================================
-# 07_salmon_index.sbatch  --  RUN ONCE. Builds the decoy-aware Salmon
-# index for transcript-level (isoform) quantification.
-#
-# WHY: 03_star_align used --quantMode GeneCounts, so there is no
-# transcriptome BAM to quantify from. Salmon reads the trimmed FASTQs
-# from 01_qc_trim directly -- the STAR BAMs stay untouched and are still
-# used for anything genome-based (StringTie, rMATS, sashimi, IGV).
-#
-# The transcript FASTA is derived from the SAME GTF that built the STAR
-# index (gffread), so gene-level and isoform-level results stay directly
-# comparable. Do not swap in a different GENCODE release here.
-#
-# ASK FIRST: helpdesk@mdc-berlin.de / TP Sequencing -- a shared
-# decoy-aware GRCh38 Salmon index may already exist on /fast. The index
-# is ~15-20 GB; don't duplicate it if one is there.
 # =====================================================================
 
 # ============ CONFIG ============
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 REF=${PROJECT}/reference
 GENOME_FA=${REF}/GRCh38.primary_assembly.genome.fa        # same file as 02_star_index
 GTF=${REF}/gencode.v46.primary_assembly.annotation.gtf    # same file as 02/04/06
