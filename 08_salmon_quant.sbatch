@@ -8,7 +8,7 @@
 #SBATCH --output=logs/salmon_quant_%A_%a.out
 #SBATCH --error=logs/salmon_quant_%A_%a.err
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=Tanuja.Bhardwaj@mdc-berlin.de
+#SBATCH --mail-user=------@mdc-berlin.de
 
 # =====================================================================
 # 08_salmon_quant.sbatch  --  transcript-level quantification.
@@ -18,7 +18,7 @@
 # =====================================================================
 
 # ============ CONFIG ============
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 TRIMDIR=${PROJECT}/trimmed
 SALMON_IDX=${PROJECT}/reference/salmon_index_decoy    # <-- or the SHARED index path
 QUANTDIR=${PROJECT}/salmon
