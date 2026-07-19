@@ -7,7 +7,7 @@
 #SBATCH --output=logs/isoform_dtu_%j.out
 #SBATCH --error=logs/isoform_dtu_%j.err
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=Tanuja.Bhardwaj@mdc-berlin.de
+#SBATCH --mail-user=---------@mdc-berlin.de
 
 # =====================================================================
 # 09_isoform_dtu.sbatch  --  wrapper around 09_isoform_dtu.R.
@@ -17,7 +17,7 @@
 # =====================================================================
 
 # ============ CONFIG ============
-PROJECT=/fast/AG_Izsvak/Tanuja/piggy
+PROJECT=file location
 RSCRIPT=${PROJECT}/scripts/09_isoform_dtu.R    # <-- adjust if you keep scripts elsewhere
 # ================================
 
